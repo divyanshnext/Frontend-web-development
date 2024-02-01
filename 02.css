@@ -1,0 +1,26 @@
+    h1{
+        color:brown;
+        size: 20px;
+    }
+
+/* id selector */
+
+    #error{
+        color:blue;
+    }
+
+/* group selector  */
+
+    h1,h2,p {
+        font-weight:400;
+    }
+
+/* class selector */
+
+    .blue{                      /* it will apply in all tag who are defined with class blue  */
+        color:aqua;
+    }
+
+    p.blue{                     /* it will apply on only p tag and not on h2 tag which is also defined with class tag */
+        color:bisque;
+    }
