@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body onresize="fun()">
+    <script>
+        var i = 0;
+    
+        function fun() {
+            var res = "width"+ window.outerWidth + "<br>" + "height = " + window.outerHeight;
+            document.getElementById("para").innerHTML = res;
+    
+            var res1 = i+=1;
+            document.getElementById('s1').innerHTML = res1;
+    
+        }
+    </script>
+    <h3>example of using onresize function</h3>
+    <p>try to resize the the browser </p>
+    <p id="para">you have resized the window <span id='s1'>2</span> times</p>
+
+    
+</body>
+</html>

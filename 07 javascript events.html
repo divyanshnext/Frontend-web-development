@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- javascript event exapmle -->
+
+    <!-- the change in the state of an object is known as an event. in html, there are varius events which represents that some activity is perdormend by the user by the browser 
+     -->
+
+     <script>
+     document.getElementById("btn").addEventListener("click",fun);
+     function fun(){
+        document.getElementById("para").innerHTML="hello world"+"<br>"+"Welcome to lpu";
+     }
+    </script>
+
+    <p>Example of the addEventListener() method.</p>
+    <p>click the flowwing button to see the effect.</p>
+    <button id ="btn">click me</button>
+    <p id="para"></p>
+
+</body>
+</html>
