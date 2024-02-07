@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>A Javascript timing events</h2>
+
+    <button onclick="setTimeout(myFunction,3000);">try it</button> <br><br>  
+    <!-- window.setTimeout() method can be written without the window prefix -->
+
+
+
+
+
+    <!-- to stop the execution -->
+    <button onclick="myVar = setTimeout(myFunction,3000);">try it</button>
+    <!-- the above will try to call the timeout function after 3 second -->
+    <button onclick="clearTimeout(myVar)">Stop it</button>
+    <!-- but if you click this button before 3 second it will not show you that alert caused by timeout -->
+    <Script>
+        function myFunction(){
+            alert("hello");
+        }
+        clearTimeout();
+    </Script>
+    
+
+    
+
+
+
+    <!-- setInterval() Method -->
+    <p id="demo">here your seconds are going</p>
+    <Script>
+        setInterval(myTimer,1000); //here 1000 is milliseconds which is 1 second
+
+        function myTimer() {
+            const d = new Date(); //this is date object : it has multiple methods // ask chat-GPT
+
+            document.getElementById("demo").innerHTML = d.getSeconds();
+        }
+    </Script>
+
+
+
+
+    
+</body>
+</html>

@@ -1,3 +1,15 @@
+<!-- there are many type of events in java script 
+common HTML Events --
+
+onchange
+onclick
+onmouseover
+onmouseout
+onkeydown
+onload
+
+ -->
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,22 +18,64 @@
     <title>Document</title>
 </head>
 <body>
-    <!-- javascript event exapmle -->
+    <h1>JAvascript HTML events</h1>
+    <h2>the onclick Attributes</h2>
 
-    <!-- the change in the state of an object is known as an event. in html, there are varius events which represents that some activity is perdormend by the user by the browser 
-     -->
+    <p id="demo"></p>
 
-     <script>
-     document.getElementById("btn").addEventListener("click",fun);
-     function fun(){
-        document.getElementById("para").innerHTML="hello world"+"<br>"+"Welcome to lpu";
-     }
+<!-- lets see how "onclick" event is working   -->
+    <button onclick = "document.getElementById('demo').innerHTML=Date()">click to see the current time in another paragraph</button>
+<!-- code changes the content of the element with id="demo". -->
+
+
+<!-- this can be done using "this .innerHTML" method   --><br><br>
+    <button onclick = "this.innerHTML=Date()">click to see the current time at the same place </button>
+<!-- code changes the content of its own element (using this.innerHTML): -->
+
+
+<!-- this can be done by writing separate function method   --><br><br>
+    <button onclick ="displayDate()">the time is ?</button>
+<!-- make a displayDate function -->
+
+    <script>
+        function displayDate(){
+            document.getElementById("demo2").innerHTML = Date();
+        }
     </script>
 
-    <p>Example of the addEventListener() method.</p>
-    <p>click the flowwing button to see the effect.</p>
-    <button id ="btn">click me</button>
-    <p id="para"></p>
+    <p id="demo2"></p>
+
+
+
+
+
+<!-- onchange: An HTML element has been changed -->
+    <input type="text" onchange="myFunction()">
+
+    <!-- onclick: The user clicks an HTML element -->
+    <button onclick="myFunction">dabao mujhe</button>
+
+    <!-- onmouseover: The user moves the mouse over an HTML element -->
+    <div onmouseover="myFunction">mouse over me</div>
+
+    <!-- onmouseout: The user moves the mouse away from an HTML element -->
+    <div onmouseout="myFunction"> mouse out from me</div>
+
+    <!-- onkeydown: The user pushes a keyboard key -->
+    <body onload="myFunction">
+
+        <script>
+            function myFunction(){
+                alert("Event Trigegered");
+            }
+        </script>
+
+
+
+
+
+<!-- Event Handlers -->
+
 
 </body>
 </html>
