@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Manipulation Example</title>
+    <style>
+        .highlight {
+            color: red;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+    <h1 id="mainHeading">Welcome to DOM Manipulation!</h1>
+    
+    <p id="paragraph" >This is a paragraph. Click the button below to see DOM manipulation in action.</p>
+
+    <button id="changeTextButton" onclick = "displayDate()" > try it </button>
+    
+    <script>
+        // Function to change text when button is clicked
+        function changeText() {
+            var paragraph = document.getElementById('paragraph');
+            paragraph.innerHTML = 'Text changed!';
+
+            var heading = document.getElementById('mainHeading');
+            heading.classList.add('highlight');
+        }
+
+        function displayDate() {
+  document.getElementById("demo").innerHTML = Date();
+}
+
+
+        // function changeText(id) {
+        //  id.innerHTML = "Ooops!";
+        // }
+        // Adding event listener to button
+        document.getElementById('changeTextButton').addEventListener('click', changeText);
+    </script>
+
+<p id="demo"></p>
+
+</body>
+</html>
